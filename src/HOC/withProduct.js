@@ -5,7 +5,7 @@ export const withProduct = (CustomComponent) => {
   return (props) => {
     const productContext = useProduct();
 
-    return <CustomComponent product={productContext.product} />;
+    return <CustomComponent products={productContext.products} />;
   };
 };
 
