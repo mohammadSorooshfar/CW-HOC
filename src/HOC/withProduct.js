@@ -36,7 +36,13 @@ export const withInsertProduct = (CustomComponent) => {
 
     return (
       <CustomComponent
-        {...{ insertProduct, changeProductName, changeProductPrice, ...props }}
+        {...{
+          insertProduct,
+          changeProductName,
+          changeProductPrice,
+          product,
+          ...props,
+        }}
       />
     );
   };
