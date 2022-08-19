@@ -3,14 +3,17 @@ import { createContext, useContext, useState } from "react";
 const ProductContext = createContext();
 
 const ProductContextProvider = (props) => {
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
+
   const addProduct = (newProduct) => {
-    setProducts(newProduct);
+    setProducts([...products, newProduct]);
   };
+
   const value = {
     products,
     addProduct,
   };
+
   return (
     <ProductContext.Provider value={value}>
       {props.children}

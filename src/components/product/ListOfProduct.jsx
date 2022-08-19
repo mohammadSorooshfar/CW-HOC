@@ -4,7 +4,7 @@ import { withProduct } from '../../HOC/withProduct';
 const ListOfProduct = ({ products }) => {
     return (
         <div>
-            {products.map((product) => (
+            {products?.map((product) => (
                 <>
                     <h3>{product.name}</h3>
                     <h3>{product.price}</h3>
